@@ -1,0 +1,5 @@
+pack_v = input("What's your pack's voltage? ")
+cells = input("How many cells in your pack? ")
+perCell = float(pack_v) / float(cells)
+print(f"Per cell voltage: {perCell:.2f}")
+print(f"Above storage: {bool(perCell > 3.8)}")
