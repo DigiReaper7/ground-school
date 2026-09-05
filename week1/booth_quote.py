@@ -1,26 +1,25 @@
-boothRate = 150
-backdropRate = 75
-addOnRate = 30
-distanceFee = 50
+booth_rate = 150
+backdrop_rate = 75
+addon_rate = 25
+distance_fee = 50
 
-hoursNeeded = input("How many hours do you need the booth? ")
-hoursNeeded = int(hoursNeeded)
+hours_needed = input("How many hours do you need the booth? ")
+hours_needed = int(hours_needed)
 
-eventDistance = input("How many miles from Chicago is your event? ")
-eventDistance = int(eventDistance)
+event_distance = input("How many miles from Chicago is your event? ")
+event_distance = int(event_distance)
 
-addOns = input("How many add-ons? ")
-addOns = int(addOns)
+add_ons = input("How many add-ons? ")
+add_ons = int(add_ons)
 
-backdropBool = input("Do you need the backdrop? yes or no ")
-backdropBool = bool(backdropBool)
+backdrop_bool = input("Do you need the backdrop? yes or no ")
 
-totalBoothPrice = boothRate * hoursNeeded
+total_booth_price = booth_rate * hours_needed
 
-totalBackdropPrice = backdropRate * hoursNeeded
+total_backdrop_price = backdrop_rate * hours_needed
 
-totalAddOnPrice = addOnRate * addOns * hoursNeeded
+total_addon_price = addon_rate * add_ons
 
-grandTotal =  totalBoothPrice + totalBackdropPrice + totalAddOnPrice
+grand_total =  total_booth_price + total_backdrop_price + total_addon_price
 
-print(f"Your total quote is: ${grandTotal}")
+print(f"Your quote total is: ${grand_total:.2f}")
