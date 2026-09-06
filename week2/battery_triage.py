@@ -13,6 +13,6 @@ elif volts >= 3.86 and volts <= 4.19:
 elif volts == 4.20:
     print(f"@ - {volts:.2f} volts. Ready to rock n' roll!!!")
 elif volts >= 4.21 and volts <= 4.5:
-    print(f"DANGER @ - {volts:.2f} VOLTS!!! DANGER - DISCHARGE THIS MOTHER FUCKER TO A SAFE LEVEL NOW!!!")
+    print(f"DANGER @ - {volts:.2f} VOLTS!!! DANGER - DISCHARGE TO A SAFE LEVEL NOW!!!")
 else:
     print("Bruh...for real?!?!?!")
