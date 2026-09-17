@@ -29,7 +29,7 @@ while notams != "n" and notams != "y":
     notams = input("Have you checked NOTAMS? ").lower()
 if notams == "n":
     print("NO-GO. Check NOTAMS.")
-    sys.exit
+    sys.exit()
 print("PASS")
 
 weather = input("Have you checked the weather? ").lower()
@@ -38,7 +38,7 @@ while weather != "n" and weather != "y":
     weather = input("Have you checked the weather? ").lower()
 if weather == "n":
     print("NO-GO. Check the weather first!")
-    sys.exit
+    sys.exit()
 print("PASS")
 
 sober = input("Has it been at least 8 hours since your last alcoholic beverage? ").lower()
@@ -47,7 +47,7 @@ while sober != "n" and sober != "y":
     sober = input("Has it been at least 8 hours since your last alcoholic beverage? ").lower()
 if sober == "n":
     print("NO-GO. Make sure it's been 8 hours since your last drink.")
-    sys.exit
+    sys.exit()
 print("PASS")
 
 electronics = input("Are all electronics operating as intended? ").lower()
@@ -56,7 +56,7 @@ while electronics != "n" and electronics != "y":
     electronics = input("Are all electronics operating as intended? ").lower()    
 if electronics == "n":
     print("NO-GO. Fix any and all electronics issues first.")
-    sys.exit
+    sys.exit()
 print("PASS")
 
 for n in range(10, 0, -1):
