@@ -5,95 +5,62 @@ print("Preflight Safety Check")
 
 print("Answer only with a 'y' or 'n'")
       
-propellers = str(input(f"Are the propellers in good shape and properly fastened? "))
-while propellers == "n":
-    print(f"NO-GO. Tighten or replace the propellers as needed and try again.")
+propellers = input("Are the propellers in good shape and properly fastened? ").lower()
+while propellers != "y" and propellers != "n":
+    print("y or n only, pilot.")
+    propellers = input("Are the propellers in good shape and properly fastened? ").lower()
+if propellers == "n":
+    print("NO-GO. Tighten or replace the propellers.")
     sys.exit()
-if propellers == "y":
-    print("PASS")
-else:
-    print(f"Not a valid selection. Try again")
-    propellers = str(input(f"Are the propellers in good shape and properly fastened? "))
-    while propellers == "n":
-        print(f"NO-GO. Tighten or replace the propellers as needed and try again.")
-        sys.exit()
-    if propellers == "y":
-        print("PASS")
-
+print("PASS")
     
-batteries = str(input("Are the batteries fully charged and with no visible bulging? "))
-while batteries == "n":
-    print(f"NO-GO. Recharge or replace the batteries as needed and try again.")
+batteries = input("Are the batteries fully charged and with no visible bulging? ").lower()
+while batteries != "y" and batteries != "n":
+    print("y or n only, pilot.")
+    batteries = input("Are the batteries fully charged and with no visible bulging? ").lower()
+if batteries == "n":
+    print("NO-GO. Recharge or replace the batteries as needed.")
     sys.exit()
-if batteries == "y":
-    print("PASS")
-else:
-    print(f"Not a valid selection. Try again")
-    batteries = str(input("Are the batteries fully charged and with no visible bulging? "))
-    while batteries == "n":
-        print(f"NO-GO. Recharge or replace the batteries as needed and try again.")
-        sys.exit
-    if batteries == "y":
-        print("PASS")
+print("PASS")
 
-notams = str(input("Have you checked NOTAMS? "))
-while notams == "n":
-    print(f"NO-GO. Check NOTAMS and try again.")
+notams = input("Have you checked NOTAMS? ").lower()
+while notams != "n" and notams != "y":
+    print("y or n only, pilot.")
+    notams = input("Have you checked NOTAMS? ").lower()
+if notams == "n":
+    print("NO-GO. Check NOTAMS.")
     sys.exit
-if notams == "y":
-    print("PASS")
-else:
-    print(f"Not a valid selection. Try again")
-    while notams == "n":
-        print(f"NO-GO. Check NOTAMS and try again.")
-        sys.exit
-    if notams == "y":
-        print("PASS")
+print("PASS")
 
-weather = str(input("Have you checked the weather? "))
-while weather == "no":
-    print(f"NO-GO. Check the weather and try again.")
+weather = input("Have you checked the weather? ").lower()
+while weather != "n" and weather != "y":
+    print("y or n only, pilot.")
+    weather = input("Have you checked the weather? ").lower()
+if weather == "n":
+    print("NO-GO. Check the weather first!")
     sys.exit
-if weather == "y":
-    print("PASS")
-else:
-    print(f"Not a valid selection. Try again")
-    while weather == "no":
-        print(f"NO-GO. Check the weather and try again.")
-        sys.exit
-    if weather == "y":
-        print("PASS")
+print("PASS")
 
-sober = str(input("Has it been at least 8 hours since your last alcoholic beverage? "))
-while sober == "no":
-    print(f"NO-GO. Make sure it's been 8 hours since your last drink and try again.")
+sober = input("Has it been at least 8 hours since your last alcoholic beverage? ").lower()
+while sober != "n" and sober != "y":
+    print("y or n only, pilot.")
+    sober = input("Has it been at least 8 hours since your last alcoholic beverage? ").lower()
+if sober == "n":
+    print("NO-GO. Make sure it's been 8 hours since your last drink.")
     sys.exit
-if sober == "y":
-    print("PASS")
-else:
-    print(f"Not a valid selection. Try again")
-    while sober == "no":
-        print(f"NO-GO. Make sure it's been 8 hours since your last drink and try again.")
-        sys.exit
-    if sober == "y":
-         print("PASS")
+print("PASS")
 
-electronics = str(input("Are all electronics operating as intended? "))
-while electronics == "n":
-    print(f"NO-GO. Fix any and all electronics issues and try again.")
+electronics = input("Are all electronics operating as intended? ").lower()
+while electronics != "n" and electronics != "y":
+    print("y or n only, pilot.")
+    electronics = input("Are all electronics operating as intended? ").lower()    
+if electronics == "n":
+    print("NO-GO. Fix any and all electronics issues first.")
     sys.exit
-if electronics == "y":
-    print("PASS")
-else:
-    print(f"Not a valid selection. Try again")
-    while electronics == "n":
-        print(f"NO-GO. Fix any and all electronics issues and try again.")
-        sys.exit
-    if sober == "y":
-        print("PASS")
+print("PASS")
 
 for n in range(10, 0, -1):
     print(n)
-    time.sleep(1)
-print(f"GO FOR LAUNCH")
+    time.sleep(.5)
+print("GO FOR LAUNCH")
 
