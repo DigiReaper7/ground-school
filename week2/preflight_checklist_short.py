@@ -4,10 +4,10 @@ import time
 
 invalid_msg = "y or n only, pilot."
 
-propellers = "Are the proplellers in good shape and properly fastened? "
+propellers = "Are the propellers in good shape and properly fastened? "
 propellers_n = "Tighten or replace the propellers."
 
-batteries = "Are the batteries fully charged with no visible bluging? "
+batteries = "Are the batteries fully charged with no visible bulging? "
 batteries_n = "Recharge or replace the batteries as needed."
 
 notams = "Have you checked NOTAMS? "
@@ -27,7 +27,7 @@ print("Preflight Safety Check")
 print("Answer only with a 'y' or 'n'")
 
 def preflight_item(question, no_go_msg):
-    """Ask a  question and return the answer."""
+    """Ask one checklist item; exit NO-GO on n, print PASS on y."""
     answer = input(question).lower()
     
     while answer != "n" and answer != "y":
